@@ -28,7 +28,10 @@
     <iframe width="600" height="355" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
-  
+
+<div class="gameModal">
+	<iframe src="http://tcdev7.wpengine.com/index-tc.htm" width="600" height="355" frameborder="0" allowfullscreen></iframe>
+</div>  
 </div>
 <!-- Modal Box End -->
 </body>

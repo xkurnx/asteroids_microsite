@@ -68,6 +68,10 @@ function popupYT(YT_ID, modalTitle){
     modal.show();
 }
 
+function playAsteroidsGame(){
+	alert(1);
+
+}
 
 window.setupScroll = function() {
 	var isMobile = navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i);
