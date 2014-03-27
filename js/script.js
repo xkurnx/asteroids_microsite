@@ -1,5 +1,4 @@
 $(document).ready(function(e) {
-	
 	$('tbody tr:odd').each(function(){
 			$(this).addClass('odd');
 	});
@@ -41,6 +40,12 @@ $(document).ready(function(e) {
 		$( '[rel="tooltip"]' ).simpletip({ fixed: true, position: 'bottom' }); 
 	}
 	
+	$('.modalWrapper').click(function(){
+		$('.modalwindow').hide();
+		$('.modalwindow').find('iframe').attr('src','');
+		$(this).hide();
+	});
+	
 	
 });
 //
@@ -69,9 +74,23 @@ function popupYT(YT_ID, modalTitle){
 }
 
 function playAsteroidsGame(){
-	alert(1);
-
+	 var bk = $('.modalWrapper');	 
+	 var modal = $('.gameModal');	 
+	 modal.find('iframe').attr('src', 'http://local.topcoder.com/asteroids-src/index-tc.htm'); 
+	 bk.css('background-color','#000000');	 
+	 var h = $(window).height();
+	 var w = $(window).width();
+		modal.css({
+			left: (w - modal.width()) / 2,
+			top: (h - modal.height()) / 2
+		});
+		bk.show();	
+		modal.show();
 }
+
+$('.playGame').click(function(){
+	playAsteroidsGame();	
+})
 
 window.setupScroll = function() {
 	var isMobile = navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i);

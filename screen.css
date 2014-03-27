@@ -1052,3 +1052,35 @@ span.nl{
 	display:block;
 	clear:both;
 }
+
+.gameModal{
+	position:fixed;
+	z-index:99999;
+}
+
+.gameModal iframe {
+            border: none;
+            box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+			margin-bottom:0px;
+			margin-top:0px;
+        }
+		
+.asteroidsClicker{
+	display: block;
+    height: 100px;
+    left: 120px;
+    position: absolute;
+    top: 250px;
+    width: 100px;
+}		
+
+.asteroidsClicker:hover{
+	cursor:pointer;    
+}
+
+.btnShareWrapper{
+	height:50px;
+	width:350px;
+	position: absolute;
+	bottom: -40px;
+}

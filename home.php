@@ -45,6 +45,10 @@ Template Name: Home
 <div id="homePage">
     <div id="contentWrapper">
       <div id="homeBanner" style="background-image:url('<?php echo $bannerImageValue;?>');">
+		<div class="asteroidsClicker playGame" onclick="playAsteroidsGame();" alt="You Found Me">
+		
+		</div>
+	  
         <div class="introContent">
 			<?php  if($homeBannerText != null) :
 			echo apply_filters('the_content', $homeBannerText);
