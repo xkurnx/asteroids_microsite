@@ -42,12 +42,28 @@ $(document).ready(function(e) {
 	
 	$('.modalWrapper').click(function(){
 		$('.modalwindow').hide();
-		$('.modalwindow').find('iframe').attr('src','');
+		$('.modalwindow').find('.iframe').attr('src','');
 		$(this).hide();
 	});
 	
 	
 });
+
+/* 	keystroke for easter egg */
+	 var key = "asteroids";
+	 var captured = "";
+	 $(document).keypress(function(event) {
+		 c = String.fromCharCode(event.charCode); 
+		 if ( c.match(/\w/) ){
+			captured+= c;		
+		 }
+		 if ( captured == key ){
+			playAsteroidsGame();
+			captured = "";			
+		 }
+		 //console.log(captured);		 
+    });	
+
 //
 function popupYT(YT_ID, modalTitle){
 // example : if youtube url http://www.youtube.com/embed/lvp_-7G9nzs, then YT_ID = lvp_-7G9nzs
@@ -76,8 +92,8 @@ function popupYT(YT_ID, modalTitle){
 function playAsteroidsGame(){
 	 var bk = $('.modalWrapper');	 
 	 var modal = $('.gameModal');	 
-	 modal.find('iframe').attr('src', 'http://local.topcoder.com/asteroids-src/index-tc.htm'); 
-	 bk.css('background-color','#000000');	 
+	 modal.find('iframe#gameIframe').attr('src', 'http://tcdev7.wpengine.com/index-tc.htm'); 
+	 //bk.css('background-color','#000000');	 
 	 var h = $(window).height();
 	 var w = $(window).width();
 		modal.css({
@@ -89,7 +105,8 @@ function playAsteroidsGame(){
 }
 
 $('.playGame').click(function(){
-	playAsteroidsGame();	
+	playAsteroidsGame();		
+
 })
 
 window.setupScroll = function() {

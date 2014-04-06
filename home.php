@@ -44,12 +44,11 @@ Template Name: Home
     <!-- Content Wrapper -->
 <div id="homePage">
     <div id="contentWrapper">
-      <div id="homeBanner" style="background-image:url('<?php echo $bannerImageValue;?>');">
-		<div class="asteroidsClicker playGame" onclick="playAsteroidsGame();" alt="You Found Me">
-		
-		</div>
+      <div id="homeBanner" style="background-image:url('<?php echo $bannerImageValue;?>');">		
 	  
         <div class="introContent">
+		<div class="asteroidsClicker playGame" onclick="playAsteroidsGame();" alt="You Found Me">		
+		</div>
 			<?php  if($homeBannerText != null) :
 			echo apply_filters('the_content', $homeBannerText);
 		  endif;?>

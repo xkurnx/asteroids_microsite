@@ -25,18 +25,24 @@
   <div class="modalContentBox">
     <div class="header">NASA ISS Longeron Challenge Introduction</div>
     <div class="videoContent">
-    <iframe width="600" height="355" frameborder="0" allowfullscreen></iframe>
+    <iframe class="iframe" width="600" height="355" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </div>
 
 	<div class="gameModal modalwindow">
-		<iframe frameBorder="0" src="" width="600" height="550" frameborder="0" allowfullscreen></iframe>
-		<div class="btnShareWrapper">		
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			<div class="fb-share-button" data-href="http://www.topcoder.com/asteroids/" data-width="100" data-type="button"></div>
-			    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
-
+		<iframe id="gameIframe" class="iframe" frameBorder="0" src="" width="600" height="550" frameborder="0" allowfullscreen></iframe>
+		<div class="btnShareWrapper">
+		<ul>
+			<li class="share-twitter">
+				<div class="twitter_button">		
+				<a href="https://twitter.com/intent/tweet?button_hashtag=AsteroidHunters" class="twitter-hashtag-button" data-url="http://www.topcoder.com/asteroids/">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>	</div>
+			</li>
+			<li class="share-facebook">
+				<div class="fb-share-button" data-href="http://www.topcoder.com/asteroids/" data-width="100" data-type="button_count"></div>
+			</li>
+		</ul>	
 		</div>
 			
 	</div>  
